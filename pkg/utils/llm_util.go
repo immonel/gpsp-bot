@@ -25,6 +25,7 @@ Voit muuttaa sanamuotoja tarpeen mukaan.
 Saat luvan lisätä vastaukseen nimen vain jos se esiintyy myös käyttäjän viimeisessä viestissä.
 Nimet ovat todennäköisesti suomalaisia etunimiä.
 Jos virkkeessä on useampi lause, palauta kielteinen muoto kaikista niistä.
+Jos virke on ensimmäisessä persoonassa, käytä vastauksessa toista persoonaa.
 Jaan on suomalainen miehen nimi.
 `),
 			openai.UserMessage("mikko menee töihin"),
@@ -34,7 +35,7 @@ Jaan on suomalainen miehen nimi.
 			openai.UserMessage("takaisin töihin"),
 			openai.AssistantMessage("ei mennä takaisin töihin"),
 			openai.UserMessage("esitän puhelimessa mikko mallikasta ja jätän 200$ tarjouksen"),
-			openai.AssistantMessage("en esitä puhelimessa mikko mallikasta enkä jätä 200$ tarjousta"),
+			openai.AssistantMessage("et esitä puhelimessa mikko mallikasta etkä jätä 200$ tarjousta"),
 			openai.UserMessage(input),
 		}),
 		Model: openai.F(openai.ChatModelGPT4o),
